@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Startseite</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="fadeIn" style="background-image: url('bild.jpg');">
+  <div class="box" id="box">
+    <h1>Magst du auch Burger? 🍔</h1>
+    <button onclick="antwort('Ja')">Ja</button>
+    <button onclick="antwort('Nein')">Nein</button>
+  </div>
+
+  <script>
+    function antwort(choice) {
+      const box = document.getElementById('box');
+      box.classList.add('fadeOut'); // Animation beim Klick
+
+      setTimeout(() => {
+        if(choice === 'Ja') {
+          window.location.href = "ja.html"; // Weiterleitung Ja-Seite
+        } else {
+          window.location.href = "nein.html"; // Weiterleitung Nein-Seite
+        }
+      }, 800); // Animation 0.8 Sekunden
+    }
+  </script>
+</body>
+</html>

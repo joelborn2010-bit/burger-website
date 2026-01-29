@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  transition: background 1s;
+}
+
+.box {
+  background: rgba(0, 0, 0, 0.6); /* dunkle transparente Box */
+  color: white;
+  padding: 20px;
+  max-width: 500px;
+  margin: 50px auto;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+button:hover {
+  background-color: rgba(255,255,255,0.3);
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Animation beim Seitenwechsel */
+.fadeOut {
+  animation: fadeOutAnim 0.8s forwards;
+}
+
+@keyframes fadeOutAnim {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.9); }
+}
+
+.fadeIn {
+  animation: fadeInAnim 0.8s forwards;
+}
+
+@keyframes fadeInAnim {
+  0% { opacity: 0; transform: scale(0.9); }
+  100% { opacity: 1; transform: scale(1); }
+}
